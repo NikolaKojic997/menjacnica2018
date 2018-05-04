@@ -178,6 +178,7 @@ public class ObrisiKursGUI extends JFrame {
 			btnDodaj.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					GUIKontroler.obrisiValutu(valuta);
+					dispose();
 				}
 			});
 			btnDodaj.setEnabled(false);

@@ -13,8 +13,13 @@ public class SOUcitajIzFajla {
 		try(
 			ObjectInputStream in = new ObjectInputStream(
 					new BufferedInputStream(new FileInputStream(putanja)))){
-
-			return (LinkedList<Valuta>)(in.readObject());
+			
+			LinkedList<Valuta> lista = (LinkedList<Valuta>)(in.readObject());
+			
+			in.close();
+			
+			return lista;
+			
 		}catch(Exception e){
 			throw new RuntimeException(e);
 		}
